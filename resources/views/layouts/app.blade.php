@@ -11,17 +11,17 @@
 <body>
     <header>
         <nav class="bg-gray-900 py-4 text-white">
-            <div class="container mx-auto flex justify-between items-center">
+            <div class="container mx-auto flex justify-between items-center align-middle">
                 <a href="/posts" class="text-2xl font-light">
                     Mohammed Fachry Dwi Handoko
-                    <span class="text-sm">
+                    <span class="text-xs tracking-widest">
                         &nbsp; 5025201159
                     </span>
                 </a>
                 <ul class="space-x-4">
                     <li>
                         <a href="https://github.com/Delos-343">
-                            <img src="" alt="Le Moi" />
+                            <img src="{{ asset('path_to_your_image.png') }}" alt="GitHub Profile" width="24" height="24">
                         </a>
                     </li>
                 </ul>
