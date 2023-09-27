@@ -14,8 +14,8 @@
             <div class="container mx-auto flex justify-between items-center align-middle">
                 <a href="/posts" class="sm:text-2xl font-light">
                     Mohammed Fachry Dwi Handoko
-                    <span class="text-xs tracking-widest hidden sm:flex">
-                        5025201159
+                    <span class="text-xs tracking-widest mt-2 hidden sm:flex">
+                        5025201159 &nbsp; | &nbsp; PBKK IUP &nbsp; | &nbsp; IF ITS
                     </span>
                 </a>
                 <ul class="space-x-4">
@@ -35,7 +35,7 @@
 
     <footer class="bg-gray-900 py-4">
         <div class="container mx-auto">
-            <p class="text-center text-white">
+            <p class="text-xs sm:text-normal font-light text-center text-white">
                 &copy; {{ date('Y') }} Laravel CRUD App &nbsp; | &nbsp; All rights reserved
             </p>
         </div>
