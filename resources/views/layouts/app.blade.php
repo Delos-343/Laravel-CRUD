@@ -12,16 +12,16 @@
     <header>
         <nav class="bg-gray-900 py-4 text-white">
             <div class="container mx-auto flex justify-between items-center align-middle">
-                <a href="/posts" class="text-2xl font-light">
+                <a href="/posts" class="sm:text-2xl font-light">
                     Mohammed Fachry Dwi Handoko
-                    <span class="text-xs tracking-widest">
-                        &nbsp; 5025201159
+                    <span class="text-xs tracking-widest hidden sm:flex">
+                        5025201159
                     </span>
                 </a>
                 <ul class="space-x-4">
                     <li>
                         <a href="https://github.com/Delos-343">
-                            <img src="{{ asset('path_to_your_image.png') }}" alt="GitHub Profile" width="24" height="24">
+                            <img src="{{ asset('images/Apple_of_Eden.png') }}" alt="GitHub Profile" width="36" height="36">
                         </a>
                     </li>
                 </ul>

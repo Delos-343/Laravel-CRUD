@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::resource('posts', PostController::class);
 
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+
+Route::delete('/posts/{post}', 'PostController@destroy')->name('posts.destroy');
