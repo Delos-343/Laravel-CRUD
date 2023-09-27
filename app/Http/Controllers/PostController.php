@@ -35,7 +35,7 @@ class PostController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'title' => $data['title'],
-            'image' => $imagePath,
+            'image' => $data['image'],
             'content' => $data['content'],
         ]);
 

@@ -31,8 +31,8 @@
                 <label for="image" class="block text-white font-medium mb-2">
                     Image
                 </label>
-                <input type="file" name="image" id="image" class="form-input w-full bg-transparent text-white border-b-2 border-gray-500 pb-4" required>
-            </div>
+                <input type="url" name="image" id="image" class="form-input w-full bg-transparent pl-2 py-2 text-white border-b-2 border-gray-500" required>
+            </div>            
             <div class="mb-4">
                 <label for="content" class="block text-white font-medium mb-2">
                     Content
