@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+@vite('resources/css/app.css')
 <div class="container mx-auto mt-8">
-    <h1 class="text-3xl font-semibold text-center text-blue-500 mb-8">
+    <h1 class="text-3xl font-semibold tracking-wider text-white mb-8">
         Create Post
     </h1>
     <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="bg-opacity-50 bg-black rounded-lg p-4 text-white border border-gray-600 shadow-md hover:shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="bg-opacity-50 bg-black rounded-sm px-6 py-8 max-w-full text-white border border-gray-600 shadow-md hover:shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-2">
             <div class="mb-4">
                 <label for="name" class="block text-white font-medium mb-2">
                     Name
@@ -30,7 +31,7 @@
                 <label for="image" class="block text-white font-medium mb-2">
                     Image
                 </label>
-                <input type="file" name="image" id="image" class="form-input w-full bg-transparent text-white border-b-2 border-gray-500" required>
+                <input type="file" name="image" id="image" class="form-input w-full bg-transparent text-white border-b-2 border-gray-500 pb-4" required>
             </div>
             <div class="mb-4">
                 <label for="content" class="block text-white font-medium mb-2">
@@ -39,7 +40,7 @@
                 <textarea name="content" id="content" class="form-textarea w-full bg-transparent text-white border-b-2 border-gray-500" required></textarea>
             </div>
             <div class="mb-4">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-8 rounded-md hover:shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">
                     Post
                 </button>
             </div>

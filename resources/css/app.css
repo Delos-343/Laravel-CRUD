@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}

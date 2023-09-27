@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel CRUD App</title>
+    <title> Laravel CRUD App </title>
     
     @vite('resources/css/app.css')
 
 </head>
 <body>
     <header>
-        <nav class="bg-blue-500 py-4 text-white">
+        <nav class="bg-gray-900 py-4 text-white">
             <div class="container mx-auto flex justify-between items-center">
-                <a href="/" class="text-2xl font-semibold">
+                <a href="/posts" class="text-2xl font-light">
                     Mohammed Fachry Dwi Handoko
+                    <span class="text-sm">
+                        &nbsp; 5025201159
+                    </span>
                 </a>
                 <ul class="space-x-4">
                     <li>
-                        <a href="/posts">
-                            Posts
+                        <a href="https://github.com/Delos-343">
+                            <img src="" alt="Le Moi" />
                         </a>
                     </li>
                 </ul>
@@ -30,10 +33,10 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-200 py-4">
+    <footer class="bg-gray-900 py-4">
         <div class="container mx-auto">
-            <p class="text-center text-gray-600">
-                &copy; {{ date('Y') }} Laravel CRUD App. All rights reserved.
+            <p class="text-center text-white">
+                &copy; {{ date('Y') }} Laravel CRUD App &nbsp; | &nbsp; All rights reserved
             </p>
         </div>
     </footer>
