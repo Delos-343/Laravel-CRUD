@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
@@ -21,21 +22,38 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'title' => 'required|string',
-            'image' => 'required|string',
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'title' => 'required|string|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust image validation rules
             'content' => 'required|string',
         ]);
 
-        Post::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'title' => $data['title'],
-            'image' => $data['image'],
-            'content' => $data['content'],
-        ]);
+        // Check for validation errors
+        if ($validator->fails()) {
+            return redirect()->route('posts.create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        // Store the data
+        $post = new Post;
+        $post->name = $request->input('name');
+        $post->email = $request->input('email');
+        $post->title = $request->input('title');
+        
+        // Handle image upload (assuming it's stored in the public/images directory)
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $post->image = $imagePath;
+        }
+
+        $post->content = $request->input('content');
+        $post->save();
+
+        // Set a success flash message
+        session()->flash('success', 'Post created successfully.');
 
         return redirect()->route('posts.index');
     }

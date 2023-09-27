@@ -3,6 +3,11 @@
 @section('content')
 @vite('resources/css/app.css')
 <div class="container h-screen mx-auto mt-8">
+    @if (session('success'))
+        <div class="bg-green-200 text-green-800 border border-green-400 rounded-md p-3 mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
     <h1 class="text-3xl font-semibold tracking-wider text-white mb-4">
         Posts
     </h1>
@@ -13,7 +18,7 @@
     @foreach($posts as $post)
         <li class="bg-opacity-50 bg-black rounded-lg p-4 text-white border border-gray-600 shadow-md hover:shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-2">
             <div class="flex w-full space-x-4">
-                <img src="{{ $post->image }}" alt="User" width="36" height="30">
+                <img src="{{ asset($post->image) }}" alt="User" width="36" height="30">
                 <h2 class="text-xl mt-2 font-semibold">{{ $post->title }}</h2>
             </div>
             <p class="mt-4 text-gray-300 text-sm font-light">{{ $post->content }}</p>
@@ -23,7 +28,9 @@
             <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="mt-4">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white py-2 px-8 rounded-md hover:shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">Delete</button>
+                <button type="submit" class="bg-red-500 hover:bg-red-600 font-light tracking-widest text-white text-md py-2 px-8 rounded-md hover:shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    Delete
+                </button>
             </form>
         </li>
     @endforeach
