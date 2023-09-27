@@ -25,11 +25,9 @@ class PostController extends Controller
             'name' => 'required|string',
             'email' => 'required|email',
             'title' => 'required|string',
-            'image' => 'required|image',
+            'image' => 'required|string',
             'content' => 'required|string',
         ]);
-
-        $imagePath = $request->file('image')->store('uploads', 'public');
 
         Post::create([
             'name' => $data['name'],

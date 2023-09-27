@@ -13,7 +13,7 @@
     @foreach($posts as $post)
         <li class="bg-opacity-50 bg-black rounded-lg p-4 text-white border border-gray-600 shadow-md hover:shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-2">
             <div class="flex w-full space-x-4">
-                <img src="{{ $post->image }}" alt="User" width="36" height="36">
+                <img src="{{ $post->image }}" alt="User" width="36" height="30">
                 <h2 class="text-xl mt-2 font-semibold">{{ $post->title }}</h2>
             </div>
             <p class="mt-4 text-gray-300 text-sm font-light">{{ $post->content }}</p>
