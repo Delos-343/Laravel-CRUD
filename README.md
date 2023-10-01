@@ -29,5 +29,5 @@ For our team task, we have made a simple CRUD function for a website with two vi
 <br>
 <br>
 
-<h4 align="middle"> The website was made using Laravel and MySQL </h4>
+<h3 align="middle"> The website was made using Laravel and MySQL </h3>
 
