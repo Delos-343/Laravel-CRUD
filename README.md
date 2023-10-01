@@ -23,8 +23,8 @@ For our team task, we have made a simple CRUD function for a website with two vi
 <br>
 <br>
 
-1. post.index.php, where posted data are stored and viewed client-side
-2. create.index.php, where users can input data for "name", "email", "title", "image", and "content".
+1. index.blade.php, where posted data are stored and viewed client-side
+2. create.blade.php, where users can input data for "name", "email", "title", "image", and "content".
 
 <br>
 <br>
