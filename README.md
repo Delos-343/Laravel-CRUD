@@ -1,4 +1,9 @@
-# Proposal-PBKK-23
+<h1 align="middle"> Tugas-PBKK-Team_Wemote </h1>
+
+<hr>
+
+<br>
+<br>
 
 Created by <br>
 
@@ -11,27 +16,18 @@ Muhammad Fadhlan Ashila Harashta <br>
 <br>
 <br>
 
-## Proposal
+## Description
 
-For our final project, we plan to make a promotional marketing website.
-The website will show all the product that we sell.
-Each product will have a unique id and other component (name, price, caption, availability) so user can learn more about the product before deciding to purchase the product.
-
-<br>
-
-The website will be made using Laravel and MySQL will be used for making the database.
+For our team task, we have made a simple CRUD function for a website with two views:
 
 <br>
 <br>
 
-## Project Goals
+1. post.index.php, where posted data are stored and viewed client-side
+2. create.index.php, where users can input data for "name", "email", "title", "image", and "content".
 
 <br>
+<br>
 
-1. The website has to be engaging with user-friendly UI. <br>
+<h4 align="middle"> The website was made using Laravel and MySQL </h4>
 
-2. The website able to display a variety of products with unique IDs and detailed information. <br>
-
-3. The website has to implement framework programming. <br>
-
-4. The website has to enable users to view the detail and availibility of the product. <br>
